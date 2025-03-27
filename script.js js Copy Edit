@@ -1,0 +1,16 @@
+// Wait for the DOM to load before executing script
+document.addEventListener("DOMContentLoaded", function () {
+    // Select all images inside the grid
+    const images = document.querySelectorAll(".grid img");
+
+    // Add hover effect to change opacity when mouse enters and leaves
+    images.forEach(image => {
+        image.addEventListener("mouseover", function () {
+            this.style.opacity = "0.7";
+        });
+
+        image.addEventListener("mouseleave", function () {
+            this.style.opacity = "1";
+        });
+    });
+});
